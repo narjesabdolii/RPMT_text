@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+
 class QuestionOne extends StatefulWidget {
   const QuestionOne({Key? key}) : super(key: key);
 
@@ -117,7 +118,7 @@ class _QuestionOneState extends State<QuestionOne> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            Navigator.pushNamed(context, '/Question_two');
+            Navigator.pushNamed(context,'/Question_two');
           });
         },
         child: const Icon(Icons.navigate_next),
