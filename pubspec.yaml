@@ -66,6 +66,8 @@ flutter:
     - assets/splash.png
     - assets/screen.jpg
     - assets/back1.jpg
+    - assets/sc.jpg
+    - assets/1.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
