@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:persian_fonts/persian_fonts.dart';
-
+import 'dart:ui';
 import 'Home.dart';
 
 class Splash extends StatefulWidget {
