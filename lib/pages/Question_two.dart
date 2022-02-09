@@ -113,6 +113,15 @@ class _QuestionTwoState extends State<QuestionTwo> {
      ],
     ),
     ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            Navigator.pushNamed(context,'/Question_three');
+          });
+        },
+        child: const Icon(Icons.navigate_next),
+        backgroundColor: Colors.orangeAccent,
+      ),
     );
 
   }
