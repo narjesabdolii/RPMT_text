@@ -10,6 +10,18 @@ class QuestionTwo extends StatefulWidget {
 class _QuestionTwoState extends State<QuestionTwo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text( 'RPMT',
+          style: TextStyle(
+            fontFamily: 'IndieFlower-Regular',
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.teal[700],
+        centerTitle: true,
+      ),
+    );
   }
 }
