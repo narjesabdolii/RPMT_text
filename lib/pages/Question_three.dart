@@ -22,6 +22,15 @@ class _QuestionThreeState extends State<QuestionThree> {
         backgroundColor: Colors.teal[700],
         centerTitle: true,
       ),
+    body: Container(
+    alignment: const Alignment(-2, 0),
+    decoration: const BoxDecoration(
+    image: DecorationImage(
+    image: AssetImage('assets/sc.jpg'),
+    fit: BoxFit.fill,
+    ),
+    ),
+    ),
     );
   }
 }
