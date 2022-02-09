@@ -30,7 +30,18 @@ class _QuestionTwoState extends State<QuestionTwo> {
     fit: BoxFit.fill,
     ),
     ),
+      child: Column(
+          children: <Widget>[
+      Container(
+      padding: const EdgeInsets.all(45.0),
+      child: const Image(
+        image: AssetImage('assets/1.png'),
+      ),
+    ),
+     ],
+    ),
     ),
     );
+
   }
 }
