@@ -38,6 +38,78 @@ class _QuestionTwoState extends State<QuestionTwo> {
         image: AssetImage('assets/2.png'),
       ),
     ),
+      Container(
+        child: Row(
+          children: <Widget>[
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('1'),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('2'),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('3'),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        child: Row(
+          children: <Widget>[
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('4'),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('5'),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+              child: ElevatedButton(
+                style:ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
+                onPressed: () {  },
+                child: const Text('6'),
+              ),
+            ),
+          ],
+        ),
+      ),
      ],
     ),
     ),
