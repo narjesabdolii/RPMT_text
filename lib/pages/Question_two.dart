@@ -33,9 +33,9 @@ class _QuestionTwoState extends State<QuestionTwo> {
       child: Column(
           children: <Widget>[
       Container(
-      padding: const EdgeInsets.all(45.0),
+      padding: const EdgeInsets.all(30),
       child: const Image(
-        image: AssetImage('assets/1.png'),
+        image: AssetImage('assets/2.png'),
       ),
     ),
      ],
