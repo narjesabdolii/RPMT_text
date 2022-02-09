@@ -22,6 +22,15 @@ class _QuestionTwoState extends State<QuestionTwo> {
         backgroundColor: Colors.teal[700],
         centerTitle: true,
       ),
+    body: Container(
+    alignment: const Alignment(-2, 0),
+    decoration: const BoxDecoration(
+    image: DecorationImage(
+    image: AssetImage('assets/sc.jpg'),
+    fit: BoxFit.fill,
+    ),
+    ),
+    ),
     );
   }
 }
