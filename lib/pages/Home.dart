@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
       body: Column(
         children : <Widget>[
           Container(
-            height: 130.0,
+            height: 70.0,
             child: Stack(
               children: <Widget>[
                 Container(
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                     right: 10,
                     bottom : 40,
                   ),
-                  height: 130.0,
+                  height: 70.0,
                   decoration: const BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
@@ -42,12 +42,8 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
+
                       ),
-                      const Spacer(),
-                     const CircleAvatar(
-                       radius: 30,
-                         backgroundImage: AssetImage('assets/brain.jpg'),
-                         ),
                         ],
                      ),
                   ),
