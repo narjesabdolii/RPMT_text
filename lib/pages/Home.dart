@@ -55,30 +55,41 @@ class _HomeState extends State<Home> {
                 ),
           ),
           const SizedBox(height: 20,),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 40,
-            child:  Container(
-              margin: const EdgeInsets.symmetric(horizontal: 100.0),
-              height: 250,
-              decoration:  BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(35),
-                  boxShadow: const [
-                    BoxShadow(
-                      offset: Offset(0,10),
-                      blurRadius: 50,
-                      color: Colors.amber,
-                    )
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/test.png'),
-                  )
-              ),
+           Container(
+             margin: const EdgeInsets.only(
+               left: 80,
+               right: 80,
+               bottom: 0,
+             ),
+             child: Column(
+               children: <Widget>[
+                    Image.asset("assets/test.png"),
+                 Container(
+                   padding: EdgeInsets.all(30),
+                decoration:  BoxDecoration(
+               color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+               boxShadow:  [
+               BoxShadow(
+               offset: const Offset(0,10),
+               blurRadius: 20,
+              color: Colors.amber.withOpacity(0.2),
+                 )
+                 ],
+                   ),
+                   child: Text('هوش مقوله ای قابل رویت یا احساس شدنی نیست، بلکه یک صفت فرضی و یک مفهوم انتزاعی و ذهنی است و آثار آن مورد مطالعه و بررسی قرار می گیرد',
+                   style: PersianFonts.Yekan.copyWith(
+                     fontWeight: FontWeight.bold,
+                     fontSize: 17,
+                   ) ,
+                     textAlign: TextAlign.end,
 
-            ),
-          ),
+                   ),
+
+                 ),
+               ],
+             ),
+           ),
         ],
       ),
     );
