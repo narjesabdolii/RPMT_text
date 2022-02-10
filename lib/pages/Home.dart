@@ -54,46 +54,25 @@ class _HomeState extends State<Home> {
                  ],
                 ),
           ),
-          const SizedBox(height: 20,),
-           Container(
-             margin: const EdgeInsets.only(
-               left: 80,
-               right: 80,
-               bottom: 0,
-             ),
-             child: Column(
-               children: <Widget>[
-                    Image.asset("assets/test.png"),
-                 Container(
-                   padding: EdgeInsets.all(30),
-                decoration:  BoxDecoration(
-               color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-               boxShadow:  [
-               BoxShadow(
-               offset: const Offset(0,10),
-               blurRadius: 20,
-              color: Colors.amber.withOpacity(0.2),
-                 )
-                 ],
-                   ),
-                   child: Text('هوش مقوله ای قابل رویت یا احساس شدنی نیست، بلکه یک صفت فرضی و یک مفهوم انتزاعی و ذهنی است و آثار آن مورد مطالعه و بررسی قرار می گیرد',
-                   style: PersianFonts.Yekan.copyWith(
-                     fontWeight: FontWeight.bold,
-                     fontSize: 17,
-                   ) ,
-                     textAlign: TextAlign.end,
+               SingleChildScrollView(
+                 scrollDirection: Axis.horizontal,
+                  child :  Row(
+                     children:  <Widget>[
+                       const TestCard(text: 'هوش مقوله ای قابل رویت یا احساس شدنی نیست، بلکه یک صفت فرضی و یک مفهوم انتزاعی و ذهنی است و آثار آن مورد مطالعه و بررسی قرار می گیرد', address: "assets/test.png"),
+                       Container(
+                         margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                         child : Icon(Icons.navigate_next),
+                       ),
+                       const TestCard(text: 'آزمودنی در مدت 40 دقیقه باید به 60 سوال پاسخ دهد. ماتریس های این آزمون به تدریج دشوارتر می شوند و فرد باید از بین 6 تا 8 گزینه تصویری که منطق الگو را تکمیل می کند را انتخاب کند', address: "assets/book.png"),
+                     ],
+                   )
+               )
 
-                   ),
-
-                 ),
-               ],
-             ),
-           ),
-        ],
-      ),
+             ],
+          ),
     );
   }
+
   AppBar buildAppBar() {
     return AppBar(
       elevation: 0,
@@ -105,6 +84,49 @@ class _HomeState extends State<Home> {
     );
   }
 }
+class TestCard extends StatelessWidget{
+  const TestCard ({
+     Key? key,
+    required this.text,
+    required this.address
+
+})  : super(key: key);
+  final String text;
+  final String address;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+     margin: EdgeInsets.fromLTRB(60, 0, 0, 0),
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 250,
+            width: 250,
+            child: Image(
+              image: AssetImage(address),
+            ),
+
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            height: 100,
+            width: 250,
+            child: Text(text,
+              style: PersianFonts.Yekan.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: 17,
+              ) ,
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  }
+
 
 
 
