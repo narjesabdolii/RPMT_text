@@ -13,36 +13,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RPMT',
-          style: TextStyle(
-            fontFamily: 'IndieFlower-Regular',
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.teal[400],
-        centerTitle: true,
-        actions: [
-          PopupMenuButton(
-            itemBuilder: (context){
-              return [
-                const PopupMenuItem<int>(
-                  value: 0,
-                  child: Text('settings'),
-                )
-              ];
-            },
-            onSelected: (value){
-              if(value == 0) {
-                print('settings ');
-              }
-            },
-          )
-        ],
-
-
-      ),
+      appBar: buildAppBar(),
       body: Container(
         alignment: const Alignment(-2, 0),
         decoration: const BoxDecoration(
@@ -66,7 +37,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(90.0, 0.0, 20.0, 10.0),
-              child:  Text(
+              child: Text(
                 'از تصاویر به فرد ارائه ',
                 style: PersianFonts.Yekan.copyWith(
                   fontWeight: FontWeight.bold,
@@ -77,7 +48,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(95.0, 0.0, 20.0, 10.0),
-              child:  Text(
+              child: Text(
                 'می شود که باید جای خالی ',
                 style: PersianFonts.Yekan.copyWith(
                   fontWeight: FontWeight.bold,
@@ -88,7 +59,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(90.0, 0.0, 20.0, 10.0),
-              child:  Text('را با تصاویر پیشنهادی ',
+              child: Text('را با تصاویر پیشنهادی ',
                 style: PersianFonts.Yekan.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 22.0,
@@ -98,7 +69,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(180.0, 0.0, 20.0, 10.0),
-              child:  Text(' درست پر کند ',
+              child: Text(' درست پر کند ',
                 style: PersianFonts.Yekan.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 22.0,
@@ -114,7 +85,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/Question_one');
                   });
                 },
-                child:  Text(
+                child: Text(
                   'شروع آزمون',
                   style: PersianFonts.Yekan.copyWith(
                     fontSize: 17.0,
@@ -131,4 +102,17 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.teal,
+      leading: IconButton(
+        icon: const Icon(Icons.menu),
+        onPressed: () {},
+      ),
+    );
+  }
 }
+
+
+
