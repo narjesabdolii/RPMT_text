@@ -74,6 +74,7 @@ flutter:
     - assets/brain.jpg
     - assets/test.png
     - assets/book.png
+    - assets/tst.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

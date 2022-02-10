@@ -64,6 +64,11 @@ class _HomeState extends State<Home> {
                          child : Icon(Icons.navigate_next),
                        ),
                        const TestCard(text: 'آزمودنی در مدت 40 دقیقه باید به 60 سوال پاسخ دهد. ماتریس های این آزمون به تدریج دشوارتر می شوند و فرد باید از بین 6 تا 8 گزینه تصویری که منطق الگو را تکمیل می کند را انتخاب کند', address: "assets/book.png"),
+                       Container(
+                         margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                         child : Icon(Icons.navigate_next),
+                       ),
+                       const TestCard(text: 'تست ریون در حقیقت، استدلال انتزاعی و هوش سیال را اندازه‌گیری می‌کند. هوش سیال به ما امکان می‌دهد تا بهتر بتوانیم از پس مشکلات روزمره‌ خود بربیاییم', address: "assets/tst.png"),
                      ],
                    )
                )
@@ -98,7 +103,7 @@ class TestCard extends StatelessWidget{
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-     margin: EdgeInsets.fromLTRB(60, 0, 0, 0),
+     margin: const EdgeInsets.fromLTRB(60, 0, 0, 0),
       child: Column(
         children: <Widget>[
           Container(
