@@ -22,6 +22,11 @@ class _HomeState extends State<Home> {
             child: Stack(
               children: <Widget>[
                 Container(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                    bottom : 40,
+                  ),
                   height: 130.0,
                   decoration: const BoxDecoration(
                     color: Colors.teal,
@@ -38,11 +43,16 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.bold,
                       ),
                       ),
-                    ],
+                      const Spacer(),
+                     const CircleAvatar(
+                       radius: 30,
+                         backgroundImage: AssetImage('assets/brain.jpg'),
+                         ),
+                        ],
+                     ),
                   ),
+                 ],
                 ),
-              ],
-            ),
           ),
           Container(
             alignment: const Alignment(-2, 0),
