@@ -40,76 +40,10 @@ class _QuestionOneState extends State<QuestionOne> {
               ),
           ),
           const SizedBox(height: 30,),
-          Container(
-            padding: const EdgeInsets.only(
-              left: 10,
-              right: 10,
-              bottom : 200,
-            ),
-            decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage('assets/1.png'),
-              ),
-              borderRadius: BorderRadius.circular(50),
-            ),
-          ),
-          const SizedBox(height: 30,),
-          Row(
-            children:  <Widget>[
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 70,
-                  right: 0,
-                ),
-                child : const ButtonCard(address: 'assets/a1.png'),
-              ),
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 45,
-                  right: 0,
-                ),
-                child : const ButtonCard(address: 'assets/b1.png'),
-              ),
-            ],
-          ),
-          const SizedBox(height: 30,),
-          Row(
-            children:  <Widget>[
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 70,
-                  right: 0,
-                ),
-                child : const ButtonCard(address: 'assets/c1.png'),
-              ),
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 45,
-                  right: 0,
-                ),
-                child : const ButtonCard(address: 'assets/d1.png'),
-              )
-            ],
-          ),
-          const SizedBox(height: 30,),
-         Row(
-           children:  <Widget>[
-             Container(
-               margin: const EdgeInsets.only(
-                 left: 70,
-                 right: 0,
-               ),
-               child : const ButtonCard(address: 'assets/e1.png'),
-             ),
-             Container(
-               margin: const EdgeInsets.only(
-                 left: 45,
-                 right: 0,
-               ),
-               child : const ButtonCard(address: 'assets/f1.png'),
-             )
-           ],
-         )
+          const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png'),
+          const SizedBox(height: 100,),
+          const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png'),
+
         ],
       ),
       ),
@@ -139,5 +73,83 @@ class ButtonCard extends StatelessWidget{
                 width: 100 ,
             ),
           );
+  }
+}
+
+class AnswerCard extends StatelessWidget{
+  const AnswerCard ({
+    Key? key,
+    required this.address
+
+  })  : super(key: key);
+  final String address;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: const EdgeInsets.only(
+        left: 70,
+        right: 0,
+      ),
+      child: ButtonCard(address: address,),
+    );
+  }
+}
+
+class QuestionCard extends StatelessWidget{
+  const QuestionCard ({
+    Key? key, required this.address1, required this.address2, required this.address3, required this.address4, required this.address5, required this.address6,
+  })  : super(key: key);
+  final String address1;
+  final String address2;
+  final String address3;
+  final String address4;
+  final String address5;
+  final String address6;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Container(
+      padding: const EdgeInsets.only(
+        left: 10,
+        right: 10,
+        bottom : 200,
+      ),
+      decoration: BoxDecoration(
+        image: const DecorationImage(
+          image: AssetImage('assets/1.png'),
+        ),
+        borderRadius: BorderRadius.circular(50),
+      ),
+    ),
+          const SizedBox(height: 30,),
+          Row(
+            children:  <Widget>[
+             AnswerCard(address: address1),
+             AnswerCard(address: address2),
+            ],
+          ),
+          const SizedBox(height: 30,),
+          Row(
+            children:  <Widget>[
+              AnswerCard(address: address3),
+              AnswerCard(address: address4),
+            ],
+          ),
+          const SizedBox(height: 30,),
+          Row(
+            children:  <Widget>[
+             AnswerCard(address: address5),
+              AnswerCard(address: address6),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
