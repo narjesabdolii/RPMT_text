@@ -56,19 +56,19 @@ class _HomeState extends State<Home> {
                      children:  <Widget>[
                        const TestCard(text: 'هوش مقوله ای قابل رویت یا احساس شدنی نیست، بلکه یک صفت فرضی و یک مفهوم انتزاعی و ذهنی است و آثار آن مورد مطالعه و بررسی قرار می گیرد', address: "assets/test.png"),
                        Container(
-                         margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                         child : Icon(Icons.navigate_next),
+                         margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                         child : const Icon(Icons.navigate_next),
                        ),
                        const TestCard(text: 'آزمودنی در مدت 40 دقیقه باید به 60 سوال پاسخ دهد. ماتریس های این آزمون به تدریج دشوارتر می شوند و فرد باید از بین 6 تا 8 گزینه تصویری که منطق الگو را تکمیل می کند را انتخاب کند', address: "assets/book.png"),
                        Container(
-                         margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                         child : Icon(Icons.navigate_next),
+                         margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                         child : const Icon(Icons.navigate_next),
                        ),
                        const TestCard(text: 'تست ریون در حقیقت، استدلال انتزاعی و هوش سیال را اندازه‌گیری می‌کند. هوش سیال به ما امکان می‌دهد تا بهتر بتوانیم از پس مشکلات روزمره‌ خود بربیاییم', address: "assets/tst.png"),
                      ],
                    )
-               )
-
+               ),
+                const BuildButton(buttonText: 'شرکت در آزمون'),
              ],
           ),
     );
@@ -127,6 +127,38 @@ class TestCard extends StatelessWidget{
     );
   }
   }
+
+class BuildButton extends StatelessWidget {
+  const BuildButton({
+    Key? key,
+    required this.buttonText,
+  }) : super(key: key);
+  final String buttonText;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+        margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+        child : ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.teal,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+          ),
+          onPressed: (){},
+          child: Text(buttonText,
+            style: PersianFonts.Yekan.copyWith(
+              color: Colors.white,
+              fontSize: 17,
+            ),
+          ),
+        )
+    );
+
+  }
+}
 
 
 
