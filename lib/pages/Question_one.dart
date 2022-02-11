@@ -53,8 +53,63 @@ class _QuestionOneState extends State<QuestionOne> {
               borderRadius: BorderRadius.circular(50),
             ),
           ),
-          const ButtonCard(address: 'assets/a1.png'),
-
+          const SizedBox(height: 30,),
+          Row(
+            children:  <Widget>[
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 70,
+                  right: 0,
+                ),
+                child : const ButtonCard(address: 'assets/a1.png'),
+              ),
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 45,
+                  right: 0,
+                ),
+                child : const ButtonCard(address: 'assets/b1.png'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 30,),
+          Row(
+            children:  <Widget>[
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 70,
+                  right: 0,
+                ),
+                child : const ButtonCard(address: 'assets/c1.png'),
+              ),
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 45,
+                  right: 0,
+                ),
+                child : const ButtonCard(address: 'assets/d1.png'),
+              )
+            ],
+          ),
+          const SizedBox(height: 30,),
+         Row(
+           children:  <Widget>[
+             Container(
+               margin: const EdgeInsets.only(
+                 left: 70,
+                 right: 0,
+               ),
+               child : const ButtonCard(address: 'assets/e1.png'),
+             ),
+             Container(
+               margin: const EdgeInsets.only(
+                 left: 45,
+                 right: 0,
+               ),
+               child : const ButtonCard(address: 'assets/f1.png'),
+             )
+           ],
+         )
         ],
       ),
       ),
@@ -75,7 +130,7 @@ class ButtonCard extends StatelessWidget{
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: (){
-
+        Navigator.pushNamed(context, '/Question_two');
       },
       child: Image(
               image: AssetImage(address),
