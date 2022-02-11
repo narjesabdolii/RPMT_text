@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
       body: Column(
         children : <Widget>[
           Container(
-            height: 70.0,
+            height: 60.0,
             child: Stack(
               children: <Widget>[
                 Container(
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                     right: 10,
                     bottom : 40,
                   ),
-                  height: 70.0,
+                  height: 60.0,
                   decoration: const BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
@@ -68,7 +68,26 @@ class _HomeState extends State<Home> {
                      ],
                    )
                ),
-                const BuildButton(buttonText: 'شرکت در آزمون'),
+          const SizedBox(height: 100,),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.teal,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+            ),
+            onPressed: () {
+              setState(() {
+                Navigator.pushNamed(context, '/Question_one');
+              });
+            },
+            child: Text('شرکت در آزمون',
+              style: PersianFonts.Yekan.copyWith(
+                color: Colors.white,
+                fontSize: 17,
+              ),
+            ),
+          )
              ],
           ),
     );
@@ -126,39 +145,8 @@ class TestCard extends StatelessWidget{
       ),
     );
   }
-  }
-
-class BuildButton extends StatelessWidget {
-  const BuildButton({
-    Key? key,
-    required this.buttonText,
-  }) : super(key: key);
-  final String buttonText;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-        margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-        child : ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.teal,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30.0),
-            ),
-          ),
-          onPressed: (){},
-          child: Text(buttonText,
-            style: PersianFonts.Yekan.copyWith(
-              color: Colors.white,
-              fontSize: 17,
-            ),
-          ),
-        )
-    );
-
-  }
 }
+
 
 
 
