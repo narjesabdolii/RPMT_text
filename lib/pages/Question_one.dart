@@ -13,117 +13,49 @@ class _QuestionOneState extends State<QuestionOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text( 'RPMT',
-          style: TextStyle(
-            fontFamily: 'IndieFlower-Regular',
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.teal[700],
-        centerTitle: true,
-      ),
-      body: Container(
-        alignment: const Alignment(-2, 0),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/sc.jpg'),
-            fit: BoxFit.fill,
-          ),
-        ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
-          children: <Widget>[
-           Container(
-             padding: const EdgeInsets.all(45.0),
-             child: const Image(
-               image: AssetImage('assets/1.png'),
-             ),
-           ),
-            Container(
-              child: Row(
+        children: <Widget>[
+          Container(
+            height: 90.0,
+              child: Stack(
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                      ),
-                      onPressed: () {  },
-                      child: const Text('1'),
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
+                      bottom : 40,
                     ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
+                    height: 90.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(35),
+                        bottomRight: Radius.circular(35),
                       ),
-                      onPressed: () {  },
-                      child: const Text('2'),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                      ),
-                      onPressed: () {  },
-                      child: const Text('3'),
                     ),
                   ),
                 ],
               ),
+          ),
+          SizedBox(height: 30,),
+          Container(
+            padding: const EdgeInsets.only(
+              left: 10,
+              right: 10,
+              bottom : 200,
             ),
-            Container(
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                      ),
-                      onPressed: () {  },
-                      child: const Text('4'),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                      ),
-                      onPressed: () {  },
-                      child: const Text('5'),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    child: ElevatedButton(
-                      style:ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                      ),
-                      onPressed: () {  },
-                      child: const Text('6'),
-                    ),
-                  ),
-                ],
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                image: AssetImage('assets/1.png'),
               ),
+              borderRadius: BorderRadius.circular(50),
             ),
-          ],
-        ),
+          )
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            Navigator.pushNamed(context,'/Question_two');
-          });
-        },
-        child: const Icon(Icons.navigate_next),
-        backgroundColor: Colors.orangeAccent,
       ),
-    );
+      );
   }
 }
