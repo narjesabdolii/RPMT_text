@@ -45,7 +45,6 @@ class _SplashState extends State<Splash> {
                   style: TextStyle(
                     color: Colors.deepOrangeAccent,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'IndieFlower-Regular',
                     fontSize: 30.0,
                     letterSpacing: 3.0,
                   ),
