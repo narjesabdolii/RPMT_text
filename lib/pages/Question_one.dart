@@ -42,7 +42,7 @@ class _QuestionOneState extends State<QuestionOne> {
           const SizedBox(height: 30,),
           const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png'),
           const SizedBox(height: 100,),
-          const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png'),
+          const QuestionCard(address1: 'assets/a2.png', address2: 'assets/b2.png', address3: 'assets/a2.png', address4: 'assets/a2.png', address5: 'assets/a2.png', address6: 'assets/a2.png'),
 
         ],
       ),
