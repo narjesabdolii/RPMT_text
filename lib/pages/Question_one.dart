@@ -40,9 +40,9 @@ class _QuestionOneState extends State<QuestionOne> {
               ),
           ),
           const SizedBox(height: 30,),
-          const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png'),
-          const SizedBox(height: 100,),
-          const QuestionCard(address1: 'assets/a2.png', address2: 'assets/b2.png', address3: 'assets/a2.png', address4: 'assets/a2.png', address5: 'assets/a2.png', address6: 'assets/a2.png'),
+          const QuestionCard(address1: 'assets/a1.png', address2: 'assets/b1.png', address3: 'assets/c1.png', address4: 'assets/d1.png', address5: 'assets/e1.png', address6: 'assets/f1.png',image: 'assets/1.png',),
+          const SizedBox(height: 30,),
+          const QuestionCard(address1: 'assets/a2.png', address2: 'assets/b2.png', address3: 'assets/a2.png', address4: 'assets/a2.png', address5: 'assets/a2.png', address6: 'assets/a2.png',image: 'assets/2.png',),
 
         ],
       ),
@@ -64,7 +64,6 @@ class ButtonCard extends StatelessWidget{
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context, '/Question_two');
       },
       child: Image(
               image: AssetImage(address),
@@ -99,8 +98,9 @@ class AnswerCard extends StatelessWidget{
 
 class QuestionCard extends StatelessWidget{
   const QuestionCard ({
-    Key? key, required this.address1, required this.address2, required this.address3, required this.address4, required this.address5, required this.address6,
+    Key? key, required this.address1, required this.address2, required this.address3, required this.address4, required this.address5, required this.address6, required this.image,
   })  : super(key: key);
+  final String image;
   final String address1;
   final String address2;
   final String address3;
@@ -121,8 +121,8 @@ class QuestionCard extends StatelessWidget{
         bottom : 200,
       ),
       decoration: BoxDecoration(
-        image: const DecorationImage(
-          image: AssetImage('assets/1.png'),
+        image: DecorationImage(
+          image: AssetImage(image),
         ),
         borderRadius: BorderRadius.circular(50),
       ),
