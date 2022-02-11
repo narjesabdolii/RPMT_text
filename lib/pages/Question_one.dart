@@ -39,7 +39,7 @@ class _QuestionOneState extends State<QuestionOne> {
                 ],
               ),
           ),
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           Container(
             padding: const EdgeInsets.only(
               left: 10,
@@ -52,10 +52,37 @@ class _QuestionOneState extends State<QuestionOne> {
               ),
               borderRadius: BorderRadius.circular(50),
             ),
-          )
+          ),
+          const ButtonCard(address: 'assets/a1.png'),
+
         ],
       ),
       ),
       );
+  }
+}
+
+class ButtonCard extends StatelessWidget{
+  const ButtonCard ({
+    Key? key,
+    required this.address
+
+  })  : super(key: key);
+  final String address;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onTap: (){
+
+      },
+      child: Image(
+              image: AssetImage(address),
+               fit: BoxFit.fill,
+                height: 50,
+                width: 100 ,
+            ),
+          );
   }
 }
